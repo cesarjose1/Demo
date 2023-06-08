@@ -11,4 +11,8 @@ public class HelloController {
         return "Greetings from Spring Boot!";
     }
 
+    @GetMapping("/Torres")
+    public String indexCesar() {
+        return "Greetings from Spring Boot! by CESAR";
+    }
 }
