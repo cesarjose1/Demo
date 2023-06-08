@@ -30,4 +30,18 @@ public class DemoJunitApplication {
 		};
 	}
 
+	@Bean
+	public CommandLineRunner commandLineRunner2(ApplicationContext ctx) {
+		return args -> {
+
+			System.out.println("Let's inspect the beans provided by Spring Boot by CESAR:");
+
+			String[] beanNames = ctx.getBeanDefinitionNames();
+			Arrays.sort(beanNames);
+			for (String beanName : beanNames) {
+				System.out.println(beanName);
+			}
+
+		};
+	}
 }
